@@ -1,5 +1,5 @@
 
-const Intern = require('../lib/Intern.js');
+const Intern = require('../lib/Intern');
 
 test('Can get school via getSchool()', () => {
     const testValue = 'school';
