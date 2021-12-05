@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/EricKenji/prof-gen-3000#readme",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "inquirer": "^8.2.0",
     "jest": "^27.4.3"
   }
