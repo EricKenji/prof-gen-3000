@@ -1,6 +1,4 @@
-
-
-
+// function that creates engineer employee card
 const generateEngineer = function(engineer) {
     return `
     <div class="card bg-light mb-3 m-4" style="max-width: 18rem;">
@@ -17,6 +15,7 @@ const generateEngineer = function(engineer) {
     `
 };
   
+// function that creates intern employee card
 const generateIntern = function(intern) {
     return `
     <div class="card bg-light mb-3 m-4" style="max-width: 18rem;">
@@ -33,6 +32,7 @@ const generateIntern = function(intern) {
     `
 };
   
+// function that creates manager employee card
 const generateManager = function(manager) {
     return `
     <div class="card bg-light mb-3 m-4" style="max-width: 18rem;">
@@ -49,7 +49,7 @@ const generateManager = function(manager) {
     `
 };
 
-
+// function that compiles all cards into an empty array
 generateHtml = data => {
     const cardArray = [];
 
@@ -80,6 +80,7 @@ generateHtml = data => {
 
 }
 
+// function that generates the base html for the page before the cards are inserted
 const generatePage = function(employeeCards) {
     return `
     <!DOCTYPE html>

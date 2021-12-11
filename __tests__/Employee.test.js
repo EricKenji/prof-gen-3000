@@ -1,5 +1,7 @@
+// pulls from employee constructor
 const Employee = require("../lib/Employee");
 
+// employee tests
 test("Can instantiate Employee instance", () => {
   const e = new Employee();
   expect(typeof(e)).toBe("object");

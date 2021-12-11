@@ -1,13 +1,17 @@
+// required node modules
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateHtml = require('./util/generateHtml')
 
+// required files
+const generateHtml = require('./util/generateHtml')
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
+// empty array to store each employee object
 const employeeArray = [];
 
+// prompts for manager data
 const promptManager = () => {
     return inquirer.prompt([
     {
@@ -35,10 +39,12 @@ const promptManager = () => {
         const { name, id, email, officeNumber } = managerData;
         const manager = new Manager (name, id, email, officeNumber);
 
+        // push manager data to array
         employeeArray.push(manager);
     })
 };
 
+// prompts for engineer and intern data
 const promptEmployee = () => {
     console.log(
         `
@@ -97,8 +103,10 @@ const promptEmployee = () => {
                 employee = new Intern (name, id, email, school);
             }
 
+            // push employee data to array
             employeeArray.push(employee);
 
+            // if user wants to add another employee, rerun function.  If not, return the array
             if (addEmployee) {
                 return promptEmployee(employeeArray);
             } else {
@@ -109,6 +117,7 @@ const promptEmployee = () => {
         
 };
 
+// function to create teams.html file
 function writeToFile(data) {
     fs.writeFile('teams.html', data, err => {
         err ? console.log(err) : console.log('HTML file created')

@@ -1,6 +1,8 @@
-
+// pulls from intern constructor
 const Intern = require('../lib/Intern');
 
+
+// intern tests
 test('Can get school via getSchool()', () => {
     const testValue = 'school';
     const e = new Intern("Alice", 1, 'test@test.com', testValue);

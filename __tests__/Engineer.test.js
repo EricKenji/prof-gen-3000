@@ -1,7 +1,7 @@
-const Employee = require("../lib/Employee");
+// pulls from engineer constructor
 const Engineer = require("../lib/Engineer");
 
-
+// engineer tests
 test("Can get Github ID via getGithub()", () => {
     const testValue = "octocat";
     const e = new Engineer("Foo", 1, "test@test.com", testValue);

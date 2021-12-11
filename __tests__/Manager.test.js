@@ -1,5 +1,7 @@
+// pulls from manager constructor
 const Manager = require('../lib/Manager');
 
+// manager tests
 test('Can get office number', () => {
     const testValue = 2;
     const e = new Manager("Foo", 1, 'test@test.com', testValue);
